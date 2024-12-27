@@ -6,10 +6,9 @@ public class SliderVolume : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
     [SerializeField] private AudioMixerGroup _audioMixerGroup;
-    [SerializeField] private ExposedParameters _exposedParameter;
     [SerializeField] private SwitcherSound _switcherMuteSound;
 
-    private float _minValueSlider = 0.0001f;
+    private const float MinValueSlider = 0.0001f;
 
     private void OnEnable()
     {
@@ -25,16 +24,15 @@ public class SliderVolume : MonoBehaviour
     {
         if (_switcherMuteSound.IsOff)
         {
-            string nameExposedParameter = Converter.EnumToString(_exposedParameter);
             float volume = ConvertValueToVolume(value);
-            _audioMixerGroup.audioMixer.SetFloat(nameExposedParameter, Mathf.Log10(volume) * 20);
+            _audioMixerGroup.audioMixer.SetFloat(_audioMixerGroup.name, Mathf.Log10(volume) * 20);
         }
     }
 
     private float ConvertValueToVolume(float value)
     {
         if (value == 0)
-            value = _minValueSlider;
+            value = MinValueSlider;
         else
             value /= _slider.maxValue;
 
