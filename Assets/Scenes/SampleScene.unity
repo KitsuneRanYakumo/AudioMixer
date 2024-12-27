@@ -3389,9 +3389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundMenu: {fileID: 1660622790}
-  _masterAudioMixerGroup: {fileID: 24300002, guid: 25685646a1ea51b44bd30b6efc49ec76, type: 2}
-  _soundAudioMixerGroup: {fileID: 4816170225813554908, guid: 25685646a1ea51b44bd30b6efc49ec76, type: 2}
-  _backgroundAudioMixerGroup: {fileID: 5357634454006087612, guid: 25685646a1ea51b44bd30b6efc49ec76, type: 2}
+  _audioMixerGroup: {fileID: 24300002, guid: 25685646a1ea51b44bd30b6efc49ec76, type: 2}
   _audioSourceSounds: {fileID: 1660622792}
   _audioSourceBackgroundSound: {fileID: 1660622791}
 --- !u!114 &1660622790
