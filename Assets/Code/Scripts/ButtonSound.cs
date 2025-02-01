@@ -23,7 +23,6 @@ public class ButtonSound : MonoBehaviour
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        //54321
     }
 
     private void PlaySound()
