@@ -11,24 +11,21 @@ public class ButtonSound : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(PlaySound);
+        
     }
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(PlaySound);
+        
     }
 
     private void Awake()
     {
-        _audioSource = GetComponent<AudioSource>();
+        
     }
 
     private void PlaySound()
     {
-        if (_audioSource.isPlaying)
-            _audioSource.Stop();
-
-        _audioSource.PlayOneShot(_audioClip);
+        
     }
 }
