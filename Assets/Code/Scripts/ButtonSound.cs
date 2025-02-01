@@ -17,7 +17,6 @@ public class ButtonSound : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(PlaySound);
-        //12345
     }
 
     private void Awake()
