@@ -26,7 +26,6 @@ public class ButtonSound : MonoBehaviour
 
     private void PlaySound()
     {
-        //asdasd
         if (_audioSource.isPlaying)
             _audioSource.Stop();
 
